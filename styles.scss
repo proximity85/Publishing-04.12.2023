@@ -1,0 +1,132 @@
+$primary-color: #0284c7;
+$secondary-color: #ef4444;
+$style-color: #65a30d;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 1.1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-left {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+
+      li {
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.login-button {
+  background-color: $secondary-color;
+  color: #fff;
+  padding: 0.5em 1.2em;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+.main-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+
+  p {
+    animation: textAnimation 2s infinite alternate;
+  }
+
+  .gift-button {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 1.3em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      background-color: $secondary-color;
+      transform: scale(1.1);
+    }
+  }
+  @keyframes textAnimation {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.secondary-section {
+  background-color: #84cc16;
+  color: #fff;
+  padding: 1.5em;
+  text-align: center;
+  margin-bottom: 70px;
+
+  .style-list {
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 50px;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+    }
+
+    li {
+      background-color: $style-color;
+      padding: 0.7em;
+      border-radius: 5px;
+    }
+  }
+}
+
+footer {
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+  padding: 0.5em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  // left: 0; right: 0; (ist das gleiche wie width: 100%;)
+  border-top: 7px solid orange;
+}
